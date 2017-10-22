@@ -19,6 +19,7 @@ loaders.push({
 
 module.exports = {
   entry: [
+	  'webpack-hot-middleware/client',
     'react-hot-loader/patch',
     './src/app/index.jsx', // your app's entry point
   ],
