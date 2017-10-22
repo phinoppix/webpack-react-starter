@@ -10,8 +10,9 @@ This starter kit contains the following so far:
 
 - Flow type checker
 - webpack multiple entries
-- webpack alias
+- webpack alias (maybe)
 - universal-webpack for isomorphic/universal app
+- repl support for dynamic proxy routing
 
 ### React project setup:
 
