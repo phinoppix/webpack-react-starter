@@ -11,58 +11,58 @@ const PORT = process.env.PORT || "8888";
 const BUILD = path.resolve('build/debug');
 
 loaders.push({
-  test: /\.scss$/,
-  loaders: ['style-loader', 'css-loader?importLoaders=1', 'sass-loader'],
-  exclude: ['node_modules']
+	test: /\.scss$/,
+	loaders: ['style-loader', 'css-loader?importLoaders=1', 'sass-loader'],
+	exclude: ['node_modules']
 });
 
 
 module.exports = {
-  entry: [
-	  'webpack-hot-middleware/client',
-    'react-hot-loader/patch',
-    './src/app/index.jsx', // your app's entry point
-  ],
-  devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
-  output: {
-    publicPath: '/',
-    path: BUILD,
-    filename: 'bundle.js'
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  module: {
-    loaders
-  },
-//   devServer: {
-//     contentBase: "./build/dev",
-//     // do not print bundle build stats
-//     noInfo: true,
-//     // enable HMR
-//     hot: true,
-//     // embed the webpack-dev-server runtime into the bundle
-//     inline: true,
-//     // serve index.html in place of 404 responses to allow HTML5 history
-//     historyApiFallback: true,
-//     port: PORT,
-//     host: HOST
-//   },
-  plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      allChunks: true
-    }),
-    new DashboardPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/app/template.html',
-      files: {
-        css: ['style.css'],
-        js: [ "bundle.js"],
-      }
-    }),
-  ]
+	entry: [
+		'webpack-hot-middleware/client',
+		'react-hot-loader/patch',
+		'./src/app/index.jsx', // your app's entry point
+	],
+	devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
+	output: {
+		publicPath: '/',
+		path: BUILD,
+		filename: 'bundle.js'
+	},
+	resolve: {
+		extensions: ['.js', '.jsx']
+	},
+	module: {
+		loaders
+	},
+	//   devServer: {
+	//     contentBase: "./build/dev",
+	//     // do not print bundle build stats
+	//     noInfo: true,
+	//     // enable HMR
+	//     hot: true,
+	//     // embed the webpack-dev-server runtime into the bundle
+	//     inline: true,
+	//     // serve index.html in place of 404 responses to allow HTML5 history
+	//     historyApiFallback: true,
+	//     port: PORT,
+	//     host: HOST
+	//   },
+	plugins: [
+		new webpack.NoEmitOnErrorsPlugin(),
+		new webpack.NamedModulesPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
+		new ExtractTextPlugin({
+			filename: 'style.css',
+			allChunks: true
+		}),
+		new DashboardPlugin(),
+		new HtmlWebpackPlugin({
+			template: './src/app/template.html',
+			files: {
+				css: ['style.css'],
+				js: ["bundle.js"],
+			}
+		}),
+	]
 };
