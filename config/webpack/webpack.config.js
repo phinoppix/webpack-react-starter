@@ -20,7 +20,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client',
     'react-hot-loader/patch',
-    './src/app/index.jsx', // your app's entry point
+    './src/app/client.jsx', // your app's entry point
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
   output: {
