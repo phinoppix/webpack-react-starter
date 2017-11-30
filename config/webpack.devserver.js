@@ -4,6 +4,8 @@
 const express = require('express');
 const webpack = require('webpack');
 const webpackMW = require('webpack-dev-middleware');
+const path = require('path');
+
 const config = require('./webpack/webpack.config');
 
 const app = express();
@@ -15,6 +17,10 @@ app.use(webpackMW(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use(express.static('mock'));
+// __dirname returns /config, the location of this js file.
+// TODO: /mock folder must be config to BUILD folder.
+//       Better to maintain a list of static folders and use
+//       copy plugin
+app.use('/mock', express.static(path.join(__dirname, '../mock')));
 
 app.listen(8080, () => console.log('Now serving from 8080'));
