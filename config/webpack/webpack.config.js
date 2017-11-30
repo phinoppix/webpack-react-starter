@@ -20,7 +20,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client',
     'react-hot-loader/patch',
-    './src/app/client.jsx', // your app's entry point
+    './src/app/startClient.jsx', // your app's entry point
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
   output: {
@@ -34,19 +34,6 @@ module.exports = {
   module: {
     loaders,
   },
-  //   devServer: {
-  //     contentBase: "./build/dev",
-  //     // do not print bundle build stats
-  //     noInfo: true,
-  //     // enable HMR
-  //     hot: true,
-  //     // embed the webpack-dev-server runtime into the bundle
-  //     inline: true,
-  //     // serve index.html in place of 404 responses to allow HTML5 history
-  //     historyApiFallback: true,
-  //     port: PORT,
-  //     host: HOST
-  //   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),

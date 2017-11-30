@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dashboard -- node config/webpack.server.js",
+    "start": "webpack-dashboard -- node config/webpack.devserver.js",
+    "start:plain": "node config/webpack.devserver.js",
     "build": "webpack --config config/webpack/webpack.config.prod.js --progress --profile --colors"
   },
   "author": "Aristotle Tiru",
@@ -38,11 +39,14 @@
   },
   "dependencies": {
     "express": "^4.16.2",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^3.1.1",
+    "react-redux": "^5.0.6",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "redux-observable": "^0.17.0",
-    "rxjs-es": "^5.0.0-beta.12"
+    "rxjs": "^5.5.2"
   }
 }

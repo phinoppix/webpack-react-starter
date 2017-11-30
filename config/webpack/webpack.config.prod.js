@@ -15,7 +15,7 @@ loaders.push({
 
 module.exports = {
   entry: [
-    './src/app/index.jsx',
+    './src/app/startServer.jsx',
     './src/scss/index.scss'
   ],
   output: {

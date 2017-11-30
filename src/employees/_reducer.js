@@ -1,4 +1,4 @@
-import { FIND_EMPLOYEES, FIND_EMPLOYEES_DONE } from './_actions';
+import * as Actions from './_actions';
 
 const init = {
   list: [],
@@ -8,12 +8,12 @@ const init = {
 
 export default (state = init, action) => {
   switch (action.type) {
-    case FIND_EMPLOYEES:
+    case Actions.FIND_EMPLOYEES:
       return {
         ...state,
         list: action.data,
       };
-    case FIND_EMPLOYEES_DONE:
+    case Actions.FIND_EMPLOYEES_DONE:
       if (action.err) {
         return {
           ...state,
