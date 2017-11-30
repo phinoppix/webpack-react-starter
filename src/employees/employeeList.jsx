@@ -39,9 +39,9 @@ export default class EmployeeList extends Component {
         <table>
           <thead>
             <tr>
-              <td>First Name</td>
-              <td>Last Name</td>
-              <td>Email</td>
+              <td className="employees-header">First Name</td>
+              <td className="employees-header">Last Name</td>
+              <td className="employees-header">Email</td>
             </tr>
           </thead>
           <tbody>
