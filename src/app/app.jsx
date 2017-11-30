@@ -1,12 +1,13 @@
 import React from 'react';
-import '../scss/index.scss';
+import { Provider } from 'react-redux';
 
-export default function App() {
-  return (
-    <div>
-      <h1>Test 4</h1>
-      <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-      <p>Enjoy!</p>
-    </div>
-  );
-}
+import createStore from './store';
+import WorkspaceContainer from './workspace.container';
+
+const store = createStore();
+
+export default () => (
+  <Provider store={store}>
+    <WorkspaceContainer />
+  </Provider>
+);
