@@ -14,8 +14,7 @@ loaders.push({
   exclude: ['node_modules'],
 });
 
-
-module.exports = {
+const webpackConfig = {
   entry: [
     'webpack-hot-middleware/client',
     'react-hot-loader/patch',
@@ -51,4 +50,16 @@ module.exports = {
     }),
     new WriteFilePlugin(),
   ],
+};
+
+/* Collection of key-values: route : folder
+  The <folder> is relative to config/webpack.devserver.js app.
+ */
+const staticFiles = [
+  { route: '/mock', folder: '../mock' },
+];
+
+module.exports = {
+  webpackConfig,
+  staticFiles,
 };
