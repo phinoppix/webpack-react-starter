@@ -8,6 +8,8 @@ const path = require('path');
 
 const config = require('./webpack/webpack.config');
 
+const PORT = process.env.PORT || '8080';
+
 const app = express();
 const compiler = webpack(config);
 
@@ -23,4 +25,4 @@ app.use(require('webpack-hot-middleware')(compiler));
 //       copy plugin
 app.use('/mock', express.static(path.join(__dirname, '../mock')));
 
-app.listen(8080, () => console.log('Now serving from 8080'));
+app.listen(PORT, () => console.log('Now serving from 8080'));

@@ -6,8 +6,6 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
-// const HOST = process.env.HOST || "127.0.0.1";
-// const PORT = process.env.PORT || "8888";
 const BUILD = path.resolve('build/debug');
 
 loaders.push({
