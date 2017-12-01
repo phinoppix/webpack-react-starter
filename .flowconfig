@@ -1,0 +1,16 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/src/flow/cssImports.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/src/flow/cssImports.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
+module.name_mapper.extension='gif' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
+
+[strict]

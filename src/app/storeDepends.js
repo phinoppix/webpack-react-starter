@@ -1,3 +1,4 @@
+/* @flow */
 import { combineReducers } from 'redux';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
 import { ajax } from 'rxjs/observable/dom/ajax';

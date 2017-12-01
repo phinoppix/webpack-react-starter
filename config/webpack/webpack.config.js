@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin');
 
 const BUILD = path.resolve('build/debug');
 
@@ -49,6 +50,7 @@ const webpackConfig = {
       },
     }),
     new WriteFilePlugin(),
+    new FlowWebpackPlugin(),
   ],
 };
 
