@@ -5,9 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin');
 
-// const HOST = process.env.HOST || "127.0.0.1";
-// const PORT = process.env.PORT || "8888";
 const BUILD = path.resolve('build/debug');
 
 loaders.push({
@@ -16,8 +15,7 @@ loaders.push({
   exclude: ['node_modules'],
 });
 
-
-module.exports = {
+const webpackConfig = {
   entry: [
     'webpack-hot-middleware/client',
     'react-hot-loader/patch',
@@ -52,5 +50,18 @@ module.exports = {
       },
     }),
     new WriteFilePlugin(),
+    new FlowWebpackPlugin(),
   ],
+};
+
+/* Collection of key-values: route : folder
+  The <folder> is relative to config/webpack.devserver.js app.
+ */
+const staticFiles = [
+  { route: '/mock', folder: '../mock' },
+];
+
+module.exports = {
+  webpackConfig,
+  staticFiles,
 };
