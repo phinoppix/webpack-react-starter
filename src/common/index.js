@@ -1,8 +1,7 @@
 import BusyAnimator from './busyAnimator';
-
-const FOO = false;
+import type { Action } from './_action';
 
 export {
-  FOO,
+  Action,
   BusyAnimator,
 };

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { BusyAnimator } from '../common';
+import type { Employee } from './_dto';
 
+type Props = {
+  employees: Array<Employee>,
+  findEmployees: (void) => void,
+}
 
-export default class EmployeeList extends Component {
+export default class EmployeeList extends Component<Props> {
   componentDidMount() {
     const { findEmployees } = this.props;
     findEmployees();
@@ -15,7 +20,7 @@ export default class EmployeeList extends Component {
       {
         employees:
         {
-          list = [],
+          list = Array.prototype,
           finding = false,
         },
       } = this.props;
@@ -23,7 +28,7 @@ export default class EmployeeList extends Component {
 
     const rows = list.map(e => (
       <tr key={e.id}>
-        <td>{e.firstName}</td>
+        <td><Link to={`/employees/${e.id}`}>{e.firstName}</Link></td>
         <td>{e.lastName}</td>
         <td>{e.email}</td>
       </tr>
@@ -52,11 +57,6 @@ export default class EmployeeList extends Component {
     );
   }
 }
-
-EmployeeList.propTypes = {
-  employees: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  findEmployees: PropTypes.func,
-};
 
 EmployeeList.defaultProps = {
   employees: { list: [] },

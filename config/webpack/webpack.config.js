@@ -21,7 +21,10 @@ const webpackConfig = {
     'react-hot-loader/patch',
     './src/app/startClient.jsx', // your app's entry point
   ],
-  devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
+  /* Required to work on Firefox Quantum v58.0b2.
+     The dev tool is only able to use cheap-module-source-map.
+  */
+  devtool: 'cheap-module-source-map',
   output: {
     publicPath: '/',
     path: BUILD,

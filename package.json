@@ -44,6 +44,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "prop-types": "^15.6.0",
+    "querystring": "^0.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^3.1.1",
@@ -53,6 +54,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-observable": "^0.17.0",
+    "reselect": "^3.0.1",
     "rxjs": "^5.5.2"
   }
 }

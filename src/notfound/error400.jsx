@@ -7,4 +7,4 @@ const Error400 = () => (
   </p>
 );
 
-export default Error400();
+export default Error400;
