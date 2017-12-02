@@ -5,6 +5,11 @@ module.exports = {
      "browser": true
    },
    "rules": {
-     "react/require-default-props": "off"
+     "react/require-default-props": "off",
+     "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "a" ],
+        "specialLink": [ "hrefLeft", "hrefRight" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      }]
    }
 };
