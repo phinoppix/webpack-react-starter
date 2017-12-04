@@ -1,6 +1,9 @@
+// @flow
+/* eslint-disable */
+import type { Epic } from 'custom-applib';
 import { FIND_EMPLOYEES, findEmployeesDone } from './_actions';
 
-const findEmployeesEpic = (action$, store, { getJSON }) => action$
+const findEmployeesEpic: Epic = (action$, store, { getJSON }) => action$
   .ofType(FIND_EMPLOYEES)
   .mergeMap(() => {
     const j = getJSON('/mock/employees.json');

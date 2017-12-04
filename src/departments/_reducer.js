@@ -1,5 +1,6 @@
+/* eslint-disable */
 // @flow
-import type { Action } from '../common';
+import type { Action } from 'custom-applib';
 import * as Actions from './_actions';
 
 const init = {
@@ -8,7 +9,12 @@ const init = {
   lastErr: null,
 };
 
-export default (state: any = init, action: Action) => {
+type DeptAction = {
+  data: any,
+  err: any
+} & Action
+
+export default (state: any = init, action: DeptAction) => {
   switch (action.type) {
     case Actions.FIND_DEPARTMENTS:
       return {

@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Route, Redirect, Switch } from 'react-router-dom';
@@ -24,8 +24,9 @@ const Workspace = (props: Props) => {
       <AppNav />
       { r && <Redirect to={r} /> }
       <Switch>
+        <Redirect exact from="/" to="/employees" />
+        <Route exact path="/employees" component={EmployeeListContainer} />
         <Route path="/employees/:id" component={EmployeeViewContainer} />
-        <Route path="/employees" component={EmployeeListContainer} />
         <Route path="/departments" component={DepartmentListContainer} />
         <Route component={Error400} />
       </Switch>

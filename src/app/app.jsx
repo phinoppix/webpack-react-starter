@@ -1,7 +1,5 @@
-/* @flow */
-/* eslint-disable */
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 // import { BrowserRouter } from 'react-router-dom';
@@ -26,10 +24,5 @@ const App = (props: Props) => {
     </Provider>
   );
 };
-
-// App.propTypes = {
-//   AppRouter: PropTypes.func.isRequired,
-// };
-
 
 export default App;

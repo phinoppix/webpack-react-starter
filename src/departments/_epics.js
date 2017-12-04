@@ -1,6 +1,12 @@
+// @flow
 import { FIND_DEPARTMENTS, findDepartmentsDone } from './_actions';
+import type { Epic } from '../common';
 
-const findDepartmentsEpic = (action$, store, { getJSON }) => action$
+const findDepartmentsEpic: Epic = (
+  action$,
+  store,
+  { getJSON },
+) => action$
   .ofType(FIND_DEPARTMENTS)
   .mergeMap(() => {
     const j = getJSON('/mock/departments.json');
