@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 export const FIND_DEPARTMENTS = 'FIND_DEPARTMENTS';
 export const FIND_DEPARTMENTS_DONE = 'FIND_DEPARTMENTS_DONE';
 

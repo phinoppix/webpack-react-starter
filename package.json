@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:fancy": "flow && webpack-dashboard -- node config/webpack.devserver.js",
-    "start": "flow && node config/webpack.devserver.js",
-    "build": "flow && webpack --config config/webpack/webpack.config.prod.js --progress --profile --colors"
+    "start:fancy": "webpack-dashboard -- node config/webpack.devserver.js",
+    "start": "node config/webpack.devserver.js",
+    "build": "webpack --config config/webpack/webpack.config.prod.js --progress --profile --colors"
   },
   "author": "Aristotle Tiru",
   "license": "MIT",

@@ -1,19 +1,22 @@
+/* @flow */
+import type { EmployeeState } from './_types';
 import * as Actions from './_actions';
+import type { FindEmployeesAction, FindEmployeesDoneAction } from './_actions';
 
-const init = {
+const init: EmployeeState = {
   list: [],
   finding: false,
   lastErr: null,
 };
 
-export default (state = init, action) => {
+type Action = FindEmployeesAction | FindEmployeesDoneAction;
+
+export default (
+  state: EmployeeState = init,
+  action: Action,
+) => {
   switch (action.type) {
-    case Actions.FIND_EMPLOYEES:
-      return {
-        ...state,
-        list: action.data,
-      };
-    case Actions.FIND_EMPLOYEES_DONE:
+    case Actions.FIND_EMPLOYEES_DONE: {
       if (action.err) {
         return {
           ...state,
@@ -24,6 +27,7 @@ export default (state = init, action) => {
         ...state,
         list: action.data,
       };
+    }
     default:
       return state;
   }

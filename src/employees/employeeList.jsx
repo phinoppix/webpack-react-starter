@@ -1,11 +1,12 @@
+/* @flow */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { BusyAnimator } from '../common';
-import type { Employee } from './_dto';
+import type { EmployeeState } from './_types';
 
 type Props = {
-  employees: Array<Employee>,
+  employees: EmployeeState,
   findEmployees: (void) => void,
 }
 
@@ -57,7 +58,3 @@ export default class EmployeeList extends Component<Props> {
     );
   }
 }
-
-EmployeeList.defaultProps = {
-  employees: { list: [] },
-};

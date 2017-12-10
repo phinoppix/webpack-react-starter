@@ -1,7 +1,7 @@
+/* @flow */
+/* eslint-disable import/prefer-default-export */
 import BusyAnimator from './busyAnimator';
-import type { Action } from './_action';
 
 export {
-  Action,
   BusyAnimator,
 };

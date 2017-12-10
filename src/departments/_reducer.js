@@ -1,6 +1,4 @@
-/* eslint-disable */
-// @flow
-import type { Action } from 'custom-applib';
+/* @flow */
 import * as Actions from './_actions';
 
 const init = {

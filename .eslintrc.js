@@ -4,7 +4,7 @@ module.exports = {
   "env": {
     "browser": true
   },
-  // "plugins": ["flowtype"],
+  "plugins": ["flowtype"],
   "rules": {
     "react/require-default-props": "off",
     "jsx-a11y/anchor-is-valid": ["error", {
@@ -16,7 +16,7 @@ module.exports = {
     //   2,
     //   "boolean"
     // ],
-    // "flowtype/define-flow-type": 1,
+    "flowtype/define-flow-type": 1,
     // "flowtype/delimiter-dangle": 0,
     // "flowtype/generic-spacing": [
     //   2,
@@ -48,9 +48,9 @@ module.exports = {
     // "flowtype/use-flow-type": 1,
     // "flowtype/valid-syntax": 1,
   },
-  // "settings": {
-  //   "flowtype": {
-  //     "onlyFilesWithFlowAnnotation": true,
-  //   },
-  // },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true,
+    },
+  },
 };

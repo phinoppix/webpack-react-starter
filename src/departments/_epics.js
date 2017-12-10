@@ -1,6 +1,5 @@
-// @flow
+/* @flow */
 import { FIND_DEPARTMENTS, findDepartmentsDone } from './_actions';
-import type { Epic } from '../common';
 
 const findDepartmentsEpic: Epic = (
   action$,

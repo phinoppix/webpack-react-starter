@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import type { Employee } from './_dto';
+import type { Employee } from './_types';
 
 type Props = {
   employees: { list: Array<Employee> },

@@ -1,6 +1,4 @@
 // @flow
-/* eslint-disable */
-import type { Epic } from 'custom-applib';
 import { FIND_EMPLOYEES, findEmployeesDone } from './_actions';
 
 const findEmployeesEpic: Epic = (action$, store, { getJSON }) => action$

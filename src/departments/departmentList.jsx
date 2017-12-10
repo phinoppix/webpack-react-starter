@@ -1,8 +1,9 @@
+/* @flow */
 import React, { Component } from 'react';
 
 type Department = {
   id: string,
-  department: string
+  departmentName: string
 }
 
 type Props = {
