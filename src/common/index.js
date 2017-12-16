@@ -1,8 +1,7 @@
+/* @flow */
+/* eslint-disable import/prefer-default-export */
 import BusyAnimator from './busyAnimator';
 
-const FOO = false;
-
 export {
-  FOO,
   BusyAnimator,
 };

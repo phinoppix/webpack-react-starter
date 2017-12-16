@@ -1,13 +1,15 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import App from './app';
+import { BrowserRouter } from 'react-router-dom';
 
+import App from './app';
 
 function renderApp() {
   ReactDOM.render(
     <AppContainer>
-      <App />
+      <App AppRouter={BrowserRouter} />
     </AppContainer>,
     document.getElementById('app'),
   );

@@ -1,16 +1,18 @@
 [ignore]
+.*/node_modules/flow-webpack-plugin/.*
 
 [include]
 
 [libs]
+src/flow-typed
 
 [lints]
 
 [options]
-module.name_mapper.extension='css' -> '<PROJECT_ROOT>/src/flow/cssImports.js.flow'
-module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/src/flow/cssImports.js.flow'
-module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
-module.name_mapper.extension='png' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
-module.name_mapper.extension='gif' -> '<PROJECT_ROOT>/src/flow/assetsImports.js.flow'
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/config/flow/cssImports.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/config/flow/cssImports.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/config/flow/assetsImports.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/config/flow/assetsImports.js.flow'
+module.name_mapper.extension='gif' -> '<PROJECT_ROOT>/config/flow/assetsImports.js.flow'
 
 [strict]

@@ -20,6 +20,10 @@ app.use(webpackMW(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-staticFiles.forEach(f => app.use(f.route, express.static(path.join(__dirname, f.folder))));
+const getStatic = folder => express.static(path.join(__dirname, folder));
+staticFiles.forEach(f => app.use(f.route, getStatic(f.folder)));
+
+/* all other requests to index.html */
+app.use((req, res) => res.redirect(301, `/?r=${encodeURIComponent(req.path)}`));
 
 app.listen(PORT, () => console.log('Now serving from 8080'));

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "flow && webpack-dashboard -- node config/webpack.devserver.js",
-    "start:plain": "flow && node config/webpack.devserver.js",
-    "build": "flow && webpack --config config/webpack/webpack.config.prod.js --progress --profile --colors"
+    "start:fancy": "webpack-dashboard -- node config/webpack.devserver.js",
+    "start": "node config/webpack.devserver.js",
+    "build": "webpack --config config/webpack/webpack.config.prod.js --progress --profile --colors"
   },
   "author": "Aristotle Tiru",
   "license": "MIT",
@@ -24,6 +24,7 @@
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
@@ -44,13 +45,17 @@
   "dependencies": {
     "express": "^4.16.2",
     "prop-types": "^15.6.0",
+    "querystring": "^0.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^3.1.1",
     "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-observable": "^0.17.0",
+    "reselect": "^3.0.1",
     "rxjs": "^5.5.2"
   }
 }
